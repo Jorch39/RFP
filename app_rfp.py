@@ -45,3 +45,10 @@ for pregunta_usuario in nuevas_preguntas:
 output_df = pd.DataFrame(resultados)
 #output_df.to_csv("output.csv", index=False)
 print("✅ Proceso completado. Resultados guardados en 'output.csv'")
+st.success("✅ Procesamiento completo")
+st.write("📄 Resultados:")
+st.dataframe(output_df)
+
+# Descargar CSV
+csv = output_df.to_csv(index=False).encode("utf-8")
+st.download_button("📥 Descargar resultados como CSV", csv, "respuestas_generadas.csv", "text/csv")
