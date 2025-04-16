@@ -42,10 +42,10 @@ for pregunta_usuario in nuevas_preguntas:
             "Similitud (Probabilidad Aproximada)": round(float(score), 4)
         })
 
-    # Guardar resultados
-    output_df = pd.DataFrame(resultados)
-    #output_df.to_csv("output.csv", index=False)
-    print("✅ Proceso completado. Resultados guardados en 'output.csv'")
+# Guardar resultados
+output_df = pd.DataFrame(resultados)
+#output_df.to_csv("output.csv", index=False)
+print("✅ Proceso completado. Resultados guardados en 'output.csv'")
 st.success("✅ Procesamiento completo")
 st.write("📄 Resultados:")
 st.dataframe(output_df)
