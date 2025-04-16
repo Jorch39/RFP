@@ -1,6 +1,8 @@
 import pandas as pd
 from sentence_transformers import SentenceTransformer, util
 import streamlit as st
+import warnings
+warnings.filterwarnings("ignore")
 
 st.title("🔍 Buscador de Respuestas Inteligente")
 st.markdown("Sube un archivo con preguntas nuevas para obtener respuestas automáticas.")
