@@ -3,7 +3,7 @@ from sentence_transformers import SentenceTransformer, util
 import streamlit as st
 
 st.title("🔍 Buscador de Respuestas Inteligente")
-st.markdown("Sube tu base de conocimiento y un archivo con preguntas nuevas para obtener respuestas automáticas.")
+st.markdown("Sube un archivo con preguntas nuevas para obtener respuestas automáticas.")
 
 # Cargar modelo
 model = SentenceTransformer('all-MiniLM-L6-v2')
