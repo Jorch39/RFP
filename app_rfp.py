@@ -25,8 +25,8 @@ nuevas_df = pd.read_csv(preguntas_file)
 nuevas_df = nuevas_df.dropna(subset=["Pregunta"])
 nuevas_preguntas = nuevas_df["Pregunta"].tolist()
 
-resultados = []
-st.spinner("Procesando preguntas...")
+    resultados = []
+    st.spinner("Procesando preguntas...")
 
 # Procesar preguntas  
     for pregunta_usuario in nuevas_preguntas:
