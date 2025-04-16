@@ -28,7 +28,7 @@ nuevas_preguntas = nuevas_df["Pregunta"].tolist()
 with st.spinner("Procesando preguntas..."):
 
 # Procesar preguntas
-    resultados = []
+resultados = []
     
     for pregunta_usuario in nuevas_preguntas:
         embedding = model.encode(pregunta_usuario, convert_to_tensor=True)
