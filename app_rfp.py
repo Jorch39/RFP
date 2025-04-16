@@ -25,11 +25,10 @@ nuevas_df = pd.read_csv(preguntas_file)
 nuevas_df = nuevas_df.dropna(subset=["Pregunta"])
 nuevas_preguntas = nuevas_df["Pregunta"].tolist()
 
+resultados = []
 with st.spinner("Procesando preguntas..."):
 
-# Procesar preguntas
-resultados = []
-    
+# Procesar preguntas  
     for pregunta_usuario in nuevas_preguntas:
         embedding = model.encode(pregunta_usuario, convert_to_tensor=True)
         similitudes = util.cos_sim(embedding, base_embeddings)[0]
