@@ -47,7 +47,7 @@ for pregunta_usuario in nuevas_preguntas:
 # Guardar resultados
 output_df = pd.DataFrame(resultados)
 #output_df.to_csv("output.csv", index=False)
-print("✅ Proceso completado. Resultados guardados en 'output.csv'")
+print("✅ Proceso completado! Resultados guardados en 'output.csv'")
 st.success("✅ Procesamiento completo")
 st.write("📄 Resultados:")
 st.dataframe(output_df)
